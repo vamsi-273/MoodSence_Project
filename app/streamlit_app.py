@@ -216,7 +216,7 @@ import numpy as np
 import torchvision.transforms as transforms
 from PIL import Image
 import pandas as pd
-import csv
+import csv  # noqa: F401
 import sys
 import os
 import time
@@ -233,12 +233,12 @@ sys.path.append(BASE_DIR)
 
 # ---------------- MODEL IMPORTS ----------------
 
-from src.models.edl_mobilenet import EDL_MobileNet
-from src.models.efficient_model import get_efficientnet_model
+from src.models.edl_mobilenet import EDL_MobileNet  # noqa: E402
+from src.models.efficient_model import get_efficientnet_model  # noqa: E402
 
-from src.ui.styles import load_css
-from src.ui.dashboard import show_emotion_card
-from src.recommendations.activities import recommendations
+from src.ui.styles import load_css  # noqa: E402
+from src.ui.dashboard import show_emotion_card  # noqa: E402
+from src.recommendations.activities import recommendations  # noqa: E402
 
 # ---------------- STREAMLIT CONFIG ----------------
 

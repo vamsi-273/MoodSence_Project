@@ -33,8 +33,8 @@ def evaluate_edl(model_path="best_edl_model.pth"):
             all_preds.extend(predicted.cpu().numpy())
             all_labels.extend(labels.numpy())
 
-    print("\nAccuracy:")
-    print(accuracy_score(all_labels, all_preds))
+    # print("\nAccuracy:")
+    # print(accuracy_score(all_labels, all_preds))
 
     print("\nConfusion Matrix:")
     print(confusion_matrix(all_labels, all_preds))

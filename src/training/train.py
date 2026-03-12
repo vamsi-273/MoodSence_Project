@@ -7,7 +7,7 @@ from src.models.mobilenet_model import get_mobilenet_model
 from src.training.dataloader import get_dataloaders
 
 
-def train_model(epochs=10, batch_size=16, lr=0.001):
+def train_model(epochs=20, batch_size=16, lr=0.001):
 
     device = torch.device("cpu")
     print("Using device:", device)

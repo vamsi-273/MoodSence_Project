@@ -7,7 +7,7 @@ from src.models.edl_loss import edl_loss
 from src.training.dataloader import get_dataloaders
 
 
-def train_edl_model(epochs=15, batch_size=16, lr=0.0005):
+def train_edl_model(epochs=20, batch_size=16, lr=0.0005):
 
     device = torch.device("cpu")
     print("Using device:", device)

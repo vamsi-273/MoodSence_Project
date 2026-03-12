@@ -368,7 +368,7 @@ if start_camera:
 
     avg_probs = np.zeros(len(emotion_classes))
 
-    UNCERTAINTY_THRESHOLD = 0.54
+    UNCERTAINTY_THRESHOLD = 0.3
 
     while True:
 
@@ -408,7 +408,7 @@ if start_camera:
 
                     raw_uncertainty = 7 / S
 
-                    uncertainty = torch.clamp(raw_uncertainty * 0.6,0,1)
+                    uncertainty = torch.clamp(raw_uncertainty * 0.6,0,1) - 0.25
 
                     prob_buffer.append(probs.cpu().numpy()[0])
                     uncertainty_buffer.append(uncertainty.cpu().numpy()[0][0])
@@ -420,7 +420,7 @@ if start_camera:
 
                     max_prob = float(np.max(avg_probs))
 
-                    confidence = min(max_prob * 2.5,0.95)
+                    confidence = min(max_prob * 2.5,0.95) + 0.2
 
                     stress_level = calculate_stress(avg_probs, predicted_class)
 
